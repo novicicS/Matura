@@ -1,0 +1,50 @@
+let x;
+const datum1=()=>{
+    let  x = document.getElementById("prvi").value;
+    let razmak = x.split(""); 
+    let sum = 0;
+    let zbir = 0;
+    for(let i=0;i<razmak.length;i++)
+    {
+        if(razmak[i]=="-")razmak.splice(i, 1); 
+    }
+    for(let i=0;i<razmak.length;i++)
+    {
+        razmak[i] = parseInt(razmak[i], 10); 
+    }
+    for(let i=0;i<razmak.length;i++)
+    
+    {
+        sum = sum + razmak[i];
+    }
+    console.log(sum);
+    while (sum) {
+        zbir = zbir + sum % 10; 
+        sum = Math.floor(sum / 10);
+    }
+    return zbir;
+}
+
+const datum2=()=>{
+    let  x = document.getElementById("drugi").value;
+    let razmak = x.split("");
+    let sum = 0;
+    let zbir = 0;
+    for(let i=0;i<razmak.length;i++)
+    {
+        if(razmak[i]=="-")razmak.splice(i, 1);
+    }
+    for(let i=0;i<razmak.length;i++)
+    {
+        razmak[i] = parseInt(razmak[i], 10);
+    }
+    for(let i=0;i<razmak.length;i++)
+    {
+        sum = sum + razmak[i];
+    }
+    while (sum) {
+        zbir = zbir + sum % 10;
+        sum = Math.floor(sum / 10);
+        }
+return zbir;
+}
